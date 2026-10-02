@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini GPS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO DO SITE -->
+    <header>
+        <h1>Meu GPS</h1>
+        <p>Atividade de Geolocalização</p>
+    </header>
+
+    <main>
+
+        <!-- SEÇÃO PRINCIPAL DO GPS -->
+        <section class="gps">
+
+            <h2>GPS</h2>
+
+            <p id="status">
+                Clique no botão para encontrar sua localização.
+            </p>
+
+            <div class="coordenadas">
+
+                <div>
+                    <strong>Latitude</strong>
+
+                    <span id="latitude">---</span>
+                </div>
+
+                <div>
+                    <strong>Longitude</strong>
+
+                    <span id="longitude">---</span>
+                </div>
+
+            </div>
+
+            <button id="btnLocalizar">
+                Encontrar minha localização
+            </button>
+
+        </section>
+
+        <section class="ultima">
+
+            <h2>Última localização salva</h2>
+
+            <p id="ultimaLocalizacao">
+                Nenhuma localização salva ainda.
+            </p>
+
+        </section>
+
+
+        <!-- SEÇÃO DO MAPA -->
+        <section>
+
+            <h2>Mapa</h2>
+
+            <div class="mapa">
+
+                <iframe
+                    id="mapa"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-53.0%2C-33.0%2C-44.0%2C-20.0&layer=mapnik"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEÇÃO PARA APAGAR A LOCALIZAÇÃO -->
+        <section class="lixeiraArea">
+
+            <h2>Apagar localização</h2>
+
+            <p>
+                Arraste o papel até a lixeira para apagar
+                a localização salva.
+            </p>
+
+            <div class="objetos">
+
+                <!--
+                    draggable="true" permite que o elemento
+                    seja arrastado.
+                -->
+                <div
+                    id="papel"
+                    class="objeto"
+                    draggable="true">
+
+                    📄
+                    <span>Papel</span>
+
+                </div>
+
+
+                <!-- Local onde o papel deve ser solto -->
+                <div
+                    id="lixeira"
+                    class="objeto lixeira">
+
+                    🗑️
+                    <span>Lixeira</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ DO SITE -->
+    <footer>
+        <p>Atividade - GPS</p>
+    </footer>
+
+
+    <!--
+        Conecta o arquivo JavaScript.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

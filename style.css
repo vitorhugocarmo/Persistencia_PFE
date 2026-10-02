@@ -1,0 +1,347 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CORPO DA PÁGINA
+   ========================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f2;
+    color: #222;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+   ========================================== */
+
+/*
+    Define a aparência da parte superior do site.
+*/
+header {
+    background: #166534;
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+    border-bottom: 4px solid #22c55e;
+}
+
+
+/* Tamanho do título principal */
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+
+/* Aparência do texto abaixo do título */
+header p {
+    color: #dcfce7;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+   ========================================== */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* ==========================================
+   CARTÕES DAS SEÇÕES
+   ========================================== */
+
+/*
+    Cada section funciona como um "cartão"
+    separado dentro da página.
+*/
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    border: 1px solid #dce7df;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Títulos das seções */
+section h2 {
+    color: #166534;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+
+/* Parágrafos diretamente dentro das seções */
+section > p {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   ÁREA DO GPS
+   ========================================== */
+
+/*
+    Diferencia visualmente a área principal do GPS
+    das outras partes do site.
+*/
+.gps {
+    background: #f7fcf8;
+    border: 1px solid #cce8d3;
+}
+
+
+/* ==========================================
+   COORDENADAS
+   ========================================== */
+
+/*
+    O display: organiza latitude e longitude
+    lado a lado.
+*/
+.coordenadas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+
+/*
+    Aparência de cada caixa de coordenada.
+*/
+.coordenada {
+    background: white;
+    border: 1px solid #d9e8dd;
+    border-radius: 9px;
+    padding: 16px;
+}
+
+
+/* Texto da coordenada */
+.coordenada span {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+
+/* Nome da coordenada */
+.coordenada strong {
+    font-size: 18px;
+    color: #14532d;
+}
+
+
+/* ==========================================
+   MENSAGEM DE STATUS
+   ========================================== */
+
+#status {
+    background: #ecfdf3;
+    color: #15803d;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #22c55e;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   BOTÃO
+   ========================================== */
+
+button {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   ÚLTIMA LOCALIZAÇÃO
+   ========================================== */
+
+#ultimaLocalizacao {
+    background: #f7fcf8;
+    border-left: 4px solid #22c55e;
+    padding: 15px;
+    border-radius: 8px;
+    color: #475569;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   MAPA
+   ========================================== */
+
+
+.mapa {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #cbd5cf;
+    background: #e5e7eb;
+}
+
+#mapa {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+/* ==========================================
+   ÁREA DE ARRASTAR E SOLTAR
+   ========================================== */
+
+.objetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+
+#papel,
+#lixeira {
+    width: 150px;
+    min-height: 120px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* Aparência do papel */
+#papel {
+    background: #f0fdf4;
+    border: 2px dashed #22c55e;
+
+    cursor: grab;
+}
+
+
+#papel:active {
+    cursor: grabbing;
+}
+
+
+/* Aparência da lixeira */
+#lixeira {
+    background: #f3f4f6;
+    border: 2px dashed #9ca3af;
+}
+
+#papel .emoji,
+#lixeira .emoji {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+
+/* Textos dentro do papel e da lixeira */
+#papel p,
+#lixeira p {
+    font-size: 13px;
+    color: #555;
+}
+
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+
+footer {
+    background: #166534;
+    color: #dcfce7;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .coordenadas {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa {
+        height: 300px;
+    }
+
+    .objetos {
+        gap: 20px;
+    }
+
+    #papel,
+    #lixeira {
+        width: 130px;
+        min-height: 110px;
+    }
+}
